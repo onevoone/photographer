@@ -1,0 +1,114 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+body {
+    font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	font-family: "Roboto", sans-serif;
+	overflow-x: hidden;
+	color: $text;
+}
+
+
+// Custom Sass / Remove before use
+
+body {
+	--color-text: #fff;
+    --color-bg: #000;
+    --color-link: #f0f0f0;
+    --color-link-hover: #fff;
+    --color-title: #fff;
+    --img-maxwidth: none;
+    --blendmode-title: overlay;
+	color: var(--color-text);
+	background-color: var(--color-bg);
+	font-family: quiroh, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.content {
+	height: 100vh;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    overflow-y: scroll;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    isolation: isolate;
+}
+
+.content__title {
+	height: 100%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 0;
+
+    font-family: forma-djr-display, sans-serif;
+    font-weight: 700;
+    font-size: 24vw;
+    mix-blend-mode: var(--blendmode-title);
+    -webkit-text-stroke: 2px var(--color-title);
+    text-stroke: 2px var(--color-title);
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    color: transparent;
+
+    pointer-events: none;
+}
+
+.content__img {
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    top: 0;
+    opacity: 1;
+}
+
+.content__img--full {
+	// width: 100%;
+    // height: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+// .img-responsive {
+//     display: block;
+// 	max-width: 100%;
+// 	height: auto;
+// }
+
+// .example-grid
+// 	display: grid
+// 	grid-gap: $gutter
+// 	grid-template-columns: 1fr 1fr
+// 	grid-template-areas: "left right"
+// 	> div:first-child
+// 		grid-area: left
+// 	> div:last-child
+// 		grid-area: right
+// 	+media-breakpoint-down(xs)
+// 		display: block
+// 		> div
+// 			padding: $gutter/2 0
+
+// .example-img
+	// width: 100%
+
+// .parent // Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/
+	// background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
