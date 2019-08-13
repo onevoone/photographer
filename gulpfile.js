@@ -30,7 +30,7 @@ gulp.task('styles', function() {
 	.pipe(sass({ outputStyle: 'expanded' }))
 	.pipe(concat('styles.min.css'))
 	.pipe(autoprefixer({
-		grid: true,
+		grid: false,
 		overrideBrowserslist: ['last 10 versions']
 	}))
 	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Optional. Comment out when debugging
@@ -42,8 +42,9 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 		// 'node_modules/jquery/dist/jquery.min.js', // Optional jQuery plug-in (npm i --save-dev jquery)
-		'app/js/_lazy.js', // JS library plug-in example
+        'app/js/_imagesloaded.min.js',
 		'app/js/_tweenmax.min.js',
+		'app/js/_lazy.js', // JS library plug-in example
 		'app/js/_custom.js', // Custom scripts. Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
